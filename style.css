@@ -14,10 +14,10 @@ body {
 .navbar {
     width: 100%;
     background-color: black;
-    position: fixed; /* Keep the navbar at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 10; /* Ensure it stays above other elements */
+    z-index: 10;
 }
 
 .navbar ul {
@@ -25,12 +25,12 @@ body {
     margin: 0;
     padding: 18px 0;
     display: flex;
-    justify-content: center; /* Center the nav links horizontally */
-    background-color: #333; /* Dark background for better contrast */
+    justify-content: center;
+    background-color: #333;
 }
 
 .navbar li {
-    margin: 0 25px; /* Add space between items */
+    margin: 0 25px;
 }
 
 .navbar a {
@@ -43,7 +43,7 @@ body {
 }
 
 .navbar a:hover {
-    color: hsl(0, 1%, 43%);
+    color: hsl(0, 8%, 7%);
 }
 
 /* Main Content Styling */
@@ -127,15 +127,6 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
-
     h1 {
         font-size: 60px;
     }
@@ -146,7 +137,6 @@ p {
     }
 
     .connect-links {
-        flex-direction: column;
         gap: 15px;
     }
 }

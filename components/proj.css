@@ -109,13 +109,4 @@ body {
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
 }
