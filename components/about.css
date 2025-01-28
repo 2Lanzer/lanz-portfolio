@@ -1,18 +1,14 @@
-html {
-    overflow-y: scroll;
-}
-
 /* Reset body styling */
 body {
     background-color: hwb(0 49% 50%);
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
+    justify-content: center;
 }
 
 /* Navbar styling */
@@ -23,7 +19,8 @@ body {
     top: 0;
     left: 0;
     z-index: 10;
-    overflow: hidden; /* Prevent any content from spilling out */
+    overflow: hidden;
+    margin-bottom: 300px;
 }
 
 .navbar ul {
@@ -43,7 +40,6 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 18px;
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -52,15 +48,19 @@ body {
     color: hsl(0, 8%, 7%);
 }
 
+.navbar .active {
+    color: hsla(60, 100%, 50%, 0.678); /* Highlight active link */
+}
+
 /* About Container styling */
 .about-container {
     text-align: center;
-    margin-top: 120px; /* Add space to avoid overlap with the navbar */
+    margin-top: 300px; /* Adjust this to be the height of your navbar */
     flex: 1;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     background-color: white;
-    border: 2px solid #ddd; /* Soft border for a cleaner look */
+    border: 2px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -74,35 +74,40 @@ body {
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure proper fit */
-    border: 4px solid #333; /* Dark border to match navbar */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #333;
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .profile h1 {
     color: hsl(0, 8%, 7%);
     font-size: 28px;
     font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
     border: 2px solid #333;
     display: inline-block;
     padding: 12px 25px;
-    margin: 0;
-    margin-bottom: 10px;
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
-    background-color: #f0f0f0; /* Subtle background color */
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile h1:hover {
+    background-color: black;
+    color: white;
 }
 
 .profile p {
     font-size: 18px;
     font-style: italic;
-    font-weight: bold;
     color: white;
     background-color: black;
     max-width: 70%;
@@ -113,7 +118,7 @@ body {
 }
 
 .profile p:hover {
-    background-color: #444; /* Darken the background slightly */
+    background-color: #444;
 }
 
 /* Details Section */
@@ -125,8 +130,8 @@ body {
     padding: 8px 15px;
     display: inline-block;
     margin-bottom: 15px;
-    box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
     background-color: #f0f0f0;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .details ul {
@@ -165,25 +170,14 @@ body {
 }
 
 .details p:hover {
-    background-color: #444; /* Slight darkening of background */
-}
-
-/* Hover Effects */
-.profile h1:hover {
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-    color: hsl(0, 8%, 7%);
+    background-color: #444;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .about-container {
-        padding-top: 250px; /* Ensure enough space on mobile devices */
-        margin-top: calc(50px + 20px); /* Add dynamic space for the navbar and extra padding */
+        padding-top: 400px;
+        margin-top: calc(250px + 50px);
     }
 
     .profile h1 {

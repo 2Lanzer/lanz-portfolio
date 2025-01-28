@@ -34,13 +34,16 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 18px;
     transition: color 0.3s;
     cursor: pointer;
 }
 
 .navbar a:hover {
     color: hsl(0, 8%, 7%);
+}
+
+.navbar .active {
+    color: hsla(60, 100%, 50%, 0.678); /* Highlight active link */
 }
 
 /* Main content */
